@@ -34,6 +34,12 @@ openssl ca -in client.csr -out client.crt -cert ca.crt -keyfile ca.key -config o
 
 https://blog.csdn.net/sjin_1314/article/details/21043613
 
+openssl verify -CAfile ca.crt server.crt
+openssl verify -CAfile ca.crt client.crt 
+openssl x509 -noout -text -in server.crt
+
+
+
 
 
 
